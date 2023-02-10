@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+  <script src="/js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <div class="row">
+      <div class="col-12"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">A C M E &nbsp; &nbsp; <i
+            class="fa-solid fa-xmark"></i></a></div>
+      <div class="container-fluid" style="margin-top: 20px; width: 100%;">
+        <div class="row">
+          <div class="col-12"><a class="side-menu-content"><img src="/image/home-icons.png"
+                class="side-menu-icons">Home</a></div>
+          <div class="col-12"><a class="side-menu-content"><img src="/image/dash-board-icon.png"
+                class="side-menu-icons">Dashboard</a></div>
+          <div class="col-12"><a class="side-menu-content"><img src="/image/inbox-icon.png"
+                class="side-menu-icons">Inbox</a></div>
+          <div class="col-12"><a class="side-menu-content"><img src="/image/products-icon.png"
+                class="side-menu-icons">Products</a></div>
+          <div class="col-12"><a class="side-menu-content"><img src="/image/settings-icon.png"
+                class="side-menu-icons">Admin</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header id="main">
+    <nav class="navbar navbar-expand-lg">
+      <div>
+        <img onclick="openNav()" class="menu-icon" src="/image/menu.png" />
+      </div>
+      <div>
+        <img src="/image/search-icon.png" class="search-icon"><a class="search-content">Search transactions, invoices or
+          help</a>
+      </div>
+      <ul class="navbar-nav ms-auto ml-md-auto">
+        <li class="nav-item"></li>
+      </ul>
+      <div class="nav-item dropdown">
+        <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+          <img class="bell" src="/image/bell.png" />
+        </a>
+        <div class="dropdown-menu" style="width: 230px; ">
+          <a class="dropdown-item" href="#">
+            <div class="row" style="padding: 5px;">
+              <div class="col-3 "><img src="/image/profile-pic-02.jpg" class="profile2-icon"></div>
+              <div class="col-6 ">
+                <p class="name">Bavid Kames</p>
+                <p class="assigned-for">Assigned you on the call with Sara</p>
+              </div>
+              <div class="col-3">
+                <p class="available">2 min ago</p>
+              </div>
+            </div>
+          </a>
+          <a class="dropdown-item" href="#">
+            <div class="row" style="padding: 5px;">
+              <div class="col-3 "><img src="/image/profile-pic-06.jpg" class="profile2-icon"></div>
+              <div class="col-6 ">
+                <p class="name">Alexa Marry</p>
+                <p class="assigned-for">Marked the task New UI as done</p>
+              </div>
+              <div class="col-3">
+                <p class="available">5 min ago</p>
+              </div>
+            </div>
+          </a>
+          <a class="dropdown-item" href="#">
+            <div class="row" style="padding: 5px;">
+              <div class="col-3 "><img src="/image/profile-pic-05.jpg" class="profile2-icon"></div>
+              <div class="col-6 ">
+                <p class="name">Eva Maria</p>
+                <p class="assigned-for">Added a new comment on Sales task</p>
+              </div>
+              <div class="col-3">
+                <p class="available">10 min ago</p>
+              </div>
+            </div>
+          </a>
+          <div class="sidemenu-separation"></div>
+          <p class="show">Show More</p>
+        </div>
+      </div>
+      <div class="nav-item dropdown">
+        <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
+          <p class="name-profile">John Deo<img src="/image/down-arrow.png"></p>
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">
+            <p class="profile-content"><img src="/image/profile-icon.png" class="profile-icon">My Profile</p>
+          </a>
+          <a class="dropdown-item" href="#">
+            <p class="profile-content"><img src="/image/billing-icon.png" class="profile-icon">Billing</p>
+          </a>
+          <a class="dropdown-item" href="#">
+            <p class="profile-content"><img src="/image/logout-icon.png" class="profile-icon">Logout</p>
+          </a>
+        </div>
+      </div>
+      <div class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown">
+          <img src="/image/profile-pic-01.jpg" class="profile-pic1">
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">
+            <p class="profile-content"><img src="/image/profile-icon.png" class="profile-icon">My Profile</p>
+          </a>
+          <a class="dropdown-item" href="#">
+            <p class="profile-content"><img src="/image/billing-icon.png" class="profile-icon">Billing</p>
+          </a>
+          <a class="dropdown-item" href="#">
+            <p class="profile-content"><img src="/image/logout-icon.png" class="profile-icon">Logout</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <section class="main-body">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-auto col-md-12">
+            <p class="overview">
+              Overview<button type="button" class="btn btn-primary btn-sm">Add Funds <i
+                  class="fa-solid fa-plus"></i></button>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-7">
+            <div class="row">
+              <div class="col-12 col-lg">
+                <div class="box">
+                  <div class="row">
+                    <div class="col-md-auto col-md-12">
+                      <p class="statics">
+                        Statistics<a class="duration">Last 6 months<img src="/image/down-arrow.png"></a></button>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <img src="/image/fc3noor2.svg" class="line-graph">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg">
+                <div class="box">
+                  <div class="row">
+                    <div class="col-md-auto col-md-12">
+                      <p class="statics">
+                        Sales Distribution</button>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <div class="container">
+                        <div class="donut-chart-block block">
+                          <div class="donut-chart">
+                            <div id="part1" class="portion-block">
+                              <div class="circle"></div>
+                            </div>
+                            <div id="part2" class="portion-block">
+                              <div class="circle"></div>
+                            </div>
+                            <div id="part3" class="portion-block">
+                              <div class="circle"></div>
+                            </div>
+                            <p class="center"></p>
+                          </div>
+                        </div>
+                        <div class="divider1"></div>
+                        <div class="row">
+                          <div class="col-6">
+                            <p class="dot-content"><img src="/image/red-dot.svg" class="dot">France<a class="count">4260
+                                Sales</a></p>
+                          </div>
+                          <div class="col-6">
+                            <p class="dot-content1"><img src="/image/blue-dot.svg" class="dot1">Italy<a
+                                class="count1">3970 Sales</a></p>
+                          </div>
+                          <div class="col-5">
+                            <p class="dot-content"><img src="/image/green-dot.svg" class="dot">Japan<a
+                                class="count">4260 Sales</a></p>
+                          </div>
+                          <div class="col-7">
+                            <p class="dot-content1"><img src="/image/purple-dot.svg" class="dot1">Canada<a
+                                class="count1">3970 Sales</a></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12" style="margin-bottom: 50px;">
+                <div class="left-box2">
+                  <p class="referrer">Referrer</p>
+                  <div class="container">
+                    <table class="table">
+                      <thead class="thead-light">
+                        <tr>
+                          <td scope="col">Location</td>
+                          <td scope="col">Views</td>
+                          <td scope="col">Sales</td>
+                          <td scope="col">Conversion</td>
+                          <td scope="col">Total</td>
+                        </tr>
+                      </thead>
+                      <tbody class="tbody-font">
+                        <tr>
+                          <td scope="row">google.com</td>
+                          <td>3746</td>
+                          <td>752</td>
+                          <td>43%</td>
+                          <td>$19,291</td>
+                        </tr>
+                        <tr>
+                          <td scope="row">facebook.com</td>
+                          <td>8126</td>
+                          <td>728</td>
+                          <td>32%</td>
+                          <td>$17,638</td>
+                        </tr>
+                        <tr>
+                          <td scope="row">twitter.com</td>
+                          <td>8836</td>
+                          <td>694</td>
+                          <td>28%</td>
+                          <td>$16,218</td>
+                        </tr>
+                        <tr>
+                          <td scope="row">Direct, email, IM</td>
+                          <td>1173</td>
+                          <td>645</td>
+                          <td>24%</td>
+                          <td>$14,421</td>
+                        </tr>
+                        <tr>
+                          <td scope="row">linkedin.com</td>
+                          <td>2739</td>
+                          <td>539</td>
+                          <td>20%</td>
+                          <td>$12,370</td>
+                        </tr>
+                        <tr>
+                          <td scope="row">instagram.com</td>
+                          <td>2739</td>
+                          <td>539</td>
+                          <td>20%</td>
+                          <td>$12,370</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p class="show-more">Show More</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg">
+            <div class="right-box">
+              <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4"><img src="/image/profile-pic-01.jpg" class="profile"></div>
+                <div class="col-4"></div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="profile-details">
+                    <p class="profile-name">Nick Herasimenka</p>
+                    <p class="profile-country">United States</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4"></div>
+                <div class="col-1"><img src="/image/twitter-icon.png" class="socialmedia-icon"></div>
+                <div class="col-1"><img src="/image/fb-icon.png" class="socialmedia-icon"></div>
+                <div class="col-1"><img src="/image/linkedin-icon.png" class="socialmedia-icon"></div>
+                <div class="col-1"><img src="/image/watsp-icon.png" class="socialmedia-icon"></div>
+                <div class="col-4"></div>
+              </div>
+              <div class="divider"></div>
+              <div class="row">
+                <div class="col-md-auto col-md-12">
+                  <p class="our-users">
+                    Our Users<a class="duration"><img src="/image/threedot-icon.png"
+                        class="socialmedia-icon"></a></button>
+                  </p>
+                </div>
+              </div>
+              <div class="row" style="padding: 5px;">
+                <div class="col-2 "><img src="/image/profile-pic-03.jpg" class="profile3-icon"></div>
+                <div class="col-6 ">
+                  <p class="profile3-name">Drew James</p>
+                  <p class="nation">United States</p>
+                </div>
+                <div class="col-4">
+                  <p class="phn-number">Mobile : 8715674877</p>
+                </div>
+              </div>
+              <div class="row" style="padding: 5px;">
+                <div class="col-2 "><img src="/image/profile-pic-02.jpg" class="profile3-icon"></div>
+                <div class="col-6 ">
+                  <p class="profile3-name">Bavid Kames</p>
+                  <p class="nation">United States</p>
+                </div>
+                <div class="col-4">
+                  <p class="phn-number">Mobile : 8715674877</p>
+                </div>
+              </div>
+              <div class="row" style="padding: 5px;">
+                <div class="col-2 "><img src="/image/profile-pic-04.jpg" class="profile3-icon"></div>
+                <div class="col-6 ">
+                  <p class="profile3-name">Lavid Emes</p>
+                  <p class="nation">United States</p>
+                </div>
+                <div class="col-4">
+                  <p class="phn-number">Mobile : 8715674877</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-lg">
+                <div class="right-box2">
+                  <p class="our-users">
+                    Product Video<a class="duration"><img src="/image/threedot-icon.png"
+                        class="socialmedia-icon"></a></button>
+                  </p>
+                  <div class="container">
+                    <div class="video"><img src="/image/play-icon.png" class="play-button"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+</body>
+</html>
